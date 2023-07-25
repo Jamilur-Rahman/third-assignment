@@ -9,21 +9,132 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/7e08b4dd4b.js" crossorigin="anonymous"></script>
+    <!-- Lato Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
     <!-- Custom Color -->
     <script>
         tailwind.config = {
           theme: {
             extend: {
               colors: {
-                clifford: '#da373d',
+                'primary-color': '#F85559',
+
               }
             }
           }
         }
     </script>
-    <style></style>
+    <style>
+        :root, [data-theme]{
+            background-color: white;
+            color: black;
+        }
+        .lato-font{
+            font-family: 'Lato', sans-serif;
+        }
+    </style>
 </head>
-<body>
-    
+<body class="lato-font">
+  <header class="container mx-auto">
+    <nav>
+        <div class="navbar bg-primary-color rounded-full mt-10 p-5">
+            <div class="hidden md:flex lg:flex flex-1">
+                <div class="hidden md:flex lg:flex">
+                    <ul class="menu menu-horizontal px-1">
+                        <li><a>Home</a></li>
+                        <li><a>About Us</a></li>
+                        <li><a>Shop</a></li>
+                        <li><a>All Fruits</a></li>
+                    </ul>
+                </div>
+            </div>
+             <div class="flex md:justify-end lg:justify-center flex-1">
+                <img src="images/logo.png" alt="">
+                <a class="btn btn-ghost normal-case text-xl">Fruit Burst</a>
+            </div>
+            <div class="hidden lg:flex lg:flex-1">
+                <div class="w-full">
+                    <input type="text" placeholder="Search Here" class="bg-white p-2 w-full rounded-full">
+                </div>
+                <div class="relative -left-10">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 460 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M220.6 130.3l-67.2 28.2V43.2L98.7 233.5l54.7-24.2v130.3l67.2-209.3zm-83.2-96.7l-1.3 4.7-15.2 52.9C80.6 106.7 52 145.8 52 191.5c0 52.3 34.3 95.9 83.4 105.5v53.6C57.5 340.1 0 272.4 0 191.6c0-80.5 59.8-147.2 137.4-158zm311.4 447.2c-11.2 11.2-23.1 12.3-28.6 10.5-5.4-1.8-27.1-19.9-60.4-44.4-33.3-24.6-33.6-35.7-43-56.7-9.4-20.9-30.4-42.6-57.5-52.4l-9.7-14.7c-24.7 16.9-53 26.9-81.3 28.7l2.1-6.6 15.9-49.5c46.5-11.9 80.9-54 80.9-104.2 0-54.5-38.4-102.1-96-107.1V32.3C254.4 37.4 320 106.8 320 191.6c0 33.6-11.2 64.7-29 90.4l14.6 9.6c9.8 27.1 31.5 48 52.4 57.4s32.2 9.7 56.8 43c24.6 33.2 42.7 54.9 44.5 60.3s.7 17.3-10.5 28.5zm-9.9-17.9c0-4.4-3.6-8-8-8s-8 3.6-8 8 3.6 8 8 8 8-3.6 8-8z"/></svg>
+                </div>
+            </div> 
+            <div class="md:hidden">
+                <div class="dropdown">
+                    <label tabindex="0" class="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-5 h-5 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                    </label>
+                    <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                        <<li><a>Home</a></li>
+                        <li><a>About Us</a></li>
+                        <li><a>Shop</a></li>
+                        <li><a>All Fruits</a></li>
+                    </ul>
+                </div>
+            </div> 
+        </div>
+    </nav>
+    <section class="relative">
+        <div class="carousel w-full mt-10">
+            <div id="slide1" class="carousel-item relative w-full">
+                <img src="/images/banner1.png" class="w-full" />
+                <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#slide4" class="btn btn-circle">❮</a> 
+                    <a href="#slide2" class="btn btn-circle">❯</a>
+                </div>
+            </div> 
+            <div id="slide2" class="carousel-item relative w-full">
+                <img src="/images/banner2.png" class="w-full" />
+                <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#slide1" class="btn btn-circle">❮</a> 
+                    <a href="#slide3" class="btn btn-circle">❯</a>
+                </div>
+            </div> 
+            <div id="slide3" class="carousel-item relative w-full">
+                <img src="/images/banner3.png" class="w-full" />
+                <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#slide2" class="btn btn-circle">❮</a> 
+                    <a href="#slide4" class="btn btn-circle">❯</a>
+                </div>
+            </div> 
+            <div id="slide4" class="carousel-item relative w-full">
+                <img src="/images/banner4.png" class="w-full" />
+                <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#slide3" class="btn btn-circle">❮</a> 
+                    <a href="#slide1" class="btn btn-circle">❯</a>
+                </div>
+            </div>
+        </div>
+        <div class="hidden lg:flex justify-center">
+            <div class="absolute top-32 text-white text-center space-y-5">
+                <h3 class="text-6xl font-bold">Exotic tastes at your<br>doorstep</h3>
+                <p class="text-xl font-medium">We supply highly quality organic products</p>
+                <button class="bg-primary-color p-3 rounded-lg">Shop Now</button>
+            </div>
+            <div class="hidden lg:flex bg-white absolute h-40 -bottom-14 rounded-lg">
+                <div>
+                    <img src="images/fruit1.png" alt="" class="w-full h-full">
+                </div>
+                <div>
+                    <img src="images/fruit2.png" alt="" class="w-full h-full">
+                </div>
+                <div>
+                    <img src="images/fruit3.png" alt="" class="w-full h-full">
+                </div>
+                <div>
+                    <img src="images/fruit4.png" alt="" class="w-full h-full">
+                </div>
+                <div>
+                    <img src="images/fruit5.png" alt="" class="w-full h-full">
+                </div>
+            </div>
+        </div>
+    </section>
+  </header>
+  <main></main>
+  <footer></footer>
 </body>
 </html>
